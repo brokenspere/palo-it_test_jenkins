@@ -4,15 +4,14 @@ pipeline {
         stage('exercise 1') {
             steps {
                sh '''
-                grep -o -i devops example.txt | wc -l
+                . ./exercise1.sh
                sh '''
             }
         }
         stage('exercise 2') {
             steps {
                sh ''' 
-                sed -i.bak 's/devops/hello_world/g' example.txt
-                cat example.txt
+                . ./exercise2.sh
                sh ''' 
             }
         }
