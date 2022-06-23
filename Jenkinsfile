@@ -4,8 +4,7 @@ pipeline {
         stage('exercise 1') {
             steps {
                sh '''
-                grep -o -i devops example.txt
-                wc -l
+                grep -o -i devops example.txt | wc -l
                sh '''
             }
         }
