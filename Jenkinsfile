@@ -10,6 +10,7 @@ pipeline {
         stage('exercise 2') {
             steps {
                 sed -i.bak 's/devops/hello_world/g' example.txt
+                cat example.txt
             }
         }
         stage('Deploy') {
