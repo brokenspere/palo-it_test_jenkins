@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('exercise 1') {
             steps {
-                grep -o -i devops example.txt | wc -l
+                grep -o -i devops example.txt
+                wc -l
             }
         }
         stage('exercise 2') {
